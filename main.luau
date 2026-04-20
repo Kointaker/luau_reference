@@ -287,3 +287,13 @@ local function printNumbers(value)
 end
 
 printNumbers(data)
+
+-- print(coroutine.status(co1)) Returns Suspended (Hasn't resumed yet)
+-- coroutine.resume(co1)
+-- print(coroutine.status(co1)) Returns Dead (Has already run and finished (if co1 is only called once))
+
+local co1 = coroutine.create(function()
+print("Hello World!")
+  end)
+
+
